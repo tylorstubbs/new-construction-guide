@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The New Construction Home Guide | Stubbs Realty</title>
+<meta name="description" content="Everything you need to know before buying a new construction home in Utah. Builders, incentives, timelines, upgrades, financing, and red flags.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+  /* ===== STUBBS REALTY BRAND TOKENS ===== */
+  :root {
+    --navy-deep:  #0f1c32;
+    --navy:       #1b2a4a;
+    --navy-mid:   #2e4170;
+    --gold:       #c8965a;
+    --gold-light: #d4a96a;
+    --cream:      #f5e8d4;
+    --brick:      #8b1a1a;
+    --slate:      #6b7a99;
+    --white:      #fdfbf7;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { animation: none !important; transition: none !important; }
+  }
+
+  body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1.06rem;
+    line-height: 1.7;
+    color: var(--navy-deep);
+    background: var(--white);
+  }
+
+  h1, h2, h3 { font-family: 'Playfair Display', serif; line-height: 1.2; }
+
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 1.25rem; }
+
+  /* ===== HERO ===== */
+  .hero {
+    background: linear-gradient(160deg, var(--navy-deep) 0%, var(--navy) 60%, var(--navy-mid) 100%);
+    color: var(--cream);
+    padding: 3.5rem 0 3rem;
+    text-align: center;
+  }
+  .hero .brand {
+    font-size: 0.85rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 1.5rem;
+  }
+  .hero h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1.1rem;
+  }
+  .hero h1 em { color: var(--gold-light); font-style: italic; }
+  .hero p {
+    max-width: 540px;
+    margin: 0 auto;
+    color: #e9ddc8;
+  }
+  .hero .rule {
+    width: 56px; height: 2px;
+    background: var(--gold);
+    margin: 1.6rem auto 0;
+  }
+
+  /* ===== LEAD FORM ===== */
+  .lead-card {
+    background: var(--cream);
+    border-top: 4px solid var(--gold);
+    padding: 2rem 1.5rem;
+    margin: -1.75rem auto 0;
+    max-width: 640px;
+    box-shadow: 0 10px 30px rgba(15, 28, 50, 0.18);
+    position: relative;
+  }
+  .lead-card.bottom { margin: 3rem auto 0; }
+  .lead-card h3 {
+    font-size: 1.4rem;
+    color: var(--navy-deep);
+    margin-bottom: 0.4rem;
+  }
+  .lead-card p.sub {
+    font-size: 0.95rem;
+    color: var(--navy-mid);
+    margin-bottom: 1.25rem;
+  }
+  .lead-form label {
+    display: block;
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--navy-mid);
+    margin: 0.9rem 0 0.3rem;
+  }
+  .lead-form input,
+  .lead-form textarea {
+    width: 100%;
+    padding: 0.75rem 0.9rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1rem;
+    border: 1px solid var(--slate);
+    border-radius: 3px;
+    background: var(--white);
+    color: var(--navy-deep);
+  }
+  .lead-form input:focus,
+  .lead-form textarea:focus {
+    outline: 2px solid var(--gold);
+    border-color: var(--gold);
+  }
+  .lead-form textarea { min-height: 90px; resize: vertical; }
+  .lead-form button {
+    display: block;
+    width: 100%;
+    margin-top: 1.3rem;
+    padding: 0.95rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--cream);
+    background: var(--navy-deep);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  .lead-form button:hover,
+  .lead-form button:focus-visible { background: var(--gold); color: var(--navy-deep); }
+
+  /* ===== SECTIONS ===== */
+  .section { padding: 3rem 0 0.5rem; }
+  .eyebrow {
+    font-size: 0.78rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .section h2 {
+    font-size: 1.75rem;
+    color: var(--navy-deep);
+    margin-bottom: 1rem;
+  }
+  .section h3.sub-head {
+    font-size: 1.25rem;
+    color: var(--navy-deep);
+    margin: 1.75rem 0 0.6rem;
+  }
+  .section p { margin-bottom: 1rem; }
+  .section ul { margin: 0 0 1rem 1.2rem; }
+  .section li { margin-bottom: 0.5rem; }
+
+  /* ===== AGENT HEADSHOT + CTA ===== */
+  .agent-block {
+    text-align: center;
+    margin: 0.5rem 0 1.75rem;
+  }
+  .agent-photo {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--gold);
+    box-shadow: 0 8px 24px rgba(15, 28, 50, 0.22);
+    display: block;
+    margin: 0 auto 0.9rem;
+  }
+  .agent-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: var(--navy-deep);
+  }
+  .agent-title {
+    font-size: 0.82rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--slate);
+    margin-top: 0.15rem;
+  }
+  .cta-btn {
+    display: inline-block;
+    margin-top: 1.1rem;
+    padding: 0.85rem 2rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--cream);
+    background: var(--navy-deep);
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .cta-btn:hover,
+  .cta-btn:focus-visible { background: var(--gold); color: var(--navy-deep); }
+
+  /* ===== BUILDER TABLE ===== */
+  .builder-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.25rem 0 1.5rem;
+    font-size: 0.95rem;
+  }
+  .builder-table th {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--cream);
+    background: var(--navy);
+    padding: 0.7rem 0.6rem;
+    text-align: left;
+  }
+  .builder-table td {
+    padding: 0.65rem 0.6rem;
+    border-bottom: 1px solid #e3d9c6;
+    vertical-align: top;
+  }
+  .builder-table tr:nth-child(even) td { background: #faf4e9; }
+  .builder-table td.b-name {
+    font-weight: 600;
+    color: var(--navy-deep);
+    white-space: nowrap;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--navy-mid);
+    background: var(--cream);
+    border: 1px solid var(--gold-light);
+    border-radius: 2px;
+    padding: 0.18rem 0.45rem;
+    margin: 0.1rem 0.25rem 0.1rem 0;
+  }
+
+  /* ===== CALLOUTS ===== */
+  .callout {
+    background: var(--cream);
+    border-left: 4px solid var(--gold);
+    padding: 1.1rem 1.25rem;
+    margin: 1.25rem 0;
+    font-size: 0.98rem;
+  }
+  .callout strong { color: var(--navy-deep); }
+
+  .redflag {
+    background: #faf0f0;
+    border-left: 4px solid var(--brick);
+    padding: 1rem 1.25rem;
+    margin: 0.9rem 0;
+  }
+  .redflag strong { color: var(--brick); }
+
+  /* ===== STEP ONE CARD ===== */
+  .step-card {
+    background: var(--navy-deep);
+    color: var(--cream);
+    padding: 2rem 1.5rem;
+    margin: 2rem 0 0.5rem;
+    border-top: 4px solid var(--gold);
+  }
+  .step-card .step-label {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .step-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--white);
+  }
+  .step-card p { margin-bottom: 1rem; color: #e9ddc8; }
+  .step-card p:last-child { margin-bottom: 0; }
+  .step-card strong { color: var(--gold-light); }
+
+  /* ===== QUESTION LIST ===== */
+  .q-list { list-style: none; margin: 1rem 0 0 0 !important; }
+  .q-list li {
+    padding: 0.85rem 0 0.85rem 1.5rem;
+    border-bottom: 1px solid #e3d9c6;
+    position: relative;
+  }
+  .q-list li::before {
+    content: "\2022";
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-weight: 600;
+  }
+  .q-list li.q-first {
+    background: var(--cream);
+    border-left: 4px solid var(--gold);
+    border-bottom: none;
+    padding: 1rem 1.25rem;
+    font-weight: 600;
+    color: var(--navy-deep);
+    margin-bottom: 0.5rem;
+  }
+  .q-list li.q-first::before { content: none; }
+
+  /* ===== FOOTER ===== */
+  footer {
+    margin-top: 3.5rem;
+    background: var(--navy-deep);
+    color: var(--slate);
+    text-align: center;
+    padding: 2.25rem 1.25rem;
+    font-size: 0.88rem;
+  }
+  footer .f-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    color: var(--cream);
+    margin-bottom: 0.35rem;
+  }
+
+  /* ===== LARGER SCREENS ===== */
+  @media (min-width: 640px) {
+    .hero { padding: 5rem 0 4rem; }
+    .hero h1 { font-size: 3rem; }
+    .lead-card { padding: 2.5rem 2.5rem; }
+    .lead-form .row2 { display: flex; gap: 1rem; }
+    .lead-form .row2 > div { flex: 1; }
+    .section h2 { font-size: 2.1rem; }
+    .step-card { padding: 2.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">Stubbs Realty</div>
+    <h1>The Smart Buyer's Guide to <em>New Construction</em></h1>
+    <p>Thinking about building instead of buying? Here's what Utah builders won't put on the brochure, and how to walk into a model home knowing more than most buyers ever do.</p>
+    <div class="rule"></div>
+  </div>
+</header>
+
+<!-- ============ LEAD FORM (TOP) ============ -->
+<div class="wrap">
+  <div class="lead-card">
+    <h3>Want the shortcut?</h3>
+    <p class="sub">Tell me what you're looking for and I'll send you current builder incentives and available inventory that fits. No pressure, no spam.</p>
+    <form class="lead-form" action="#" method="POST">
+      <div class="row2">
+        <div>
+          <label for="name-top">Name</label>
+          <input type="text" id="name-top" name="name" required autocomplete="name">
+        </div>
+        <div>
+          <label for="email-top">Email</label>
+          <input type="email" id="email-top" name="email" required autocomplete="email">
+        </div>
+      </div>
+      <label for="looking-top">What are you looking for?</label>
+      <textarea id="looking-top" name="message" placeholder="e.g. Townhome in Spanish Fork under $450K, moving next spring"></textarea>
+      <button type="submit">Send me the details</button>
+    </form>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <!-- ============ WHY NEW CONSTRUCTION ============ -->
+  <section class="section">
+    <div class="eyebrow">Start here</div>
+    <h2>Why buyers are choosing new builds</h2>
+    <p>New construction has quietly become one of the best deals in the Utah market. Builders carry inventory they need to move, which means they're offering incentives like rate buydowns, closing cost credits, and free upgrades that regular sellers simply can't match.</p>
+    <p>But buying new is a different game than buying resale. The contract is written by the builder. The sales agent in the model home works for the builder. And the price on the sign is rarely the whole story. This guide walks you through the game so you can play it well.</p>
+    <div class="callout"><strong>Good to know:</strong> The builder's on-site agent represents the builder, not you. Bringing your own agent costs you nothing (the builder pays the commission), and it means someone at the table is negotiating for <em>your</em> side.</div>
+  </section>
+
+  <!-- ============ WHY ME ============ -->
+  <section class="section">
+    <div class="eyebrow">Your guide</div>
+    <h2>Why I specialize in new construction</h2>
+    <div class="agent-block">
+      <img src="headshot.jpg" alt="Tylor Stubbs, Stubbs Realty" class="agent-photo" width="170" height="170">
+      <div class="agent-name">Tylor Stubbs</div>
+      <div class="agent-title">Stubbs Realty &middot; New Construction Specialist</div>
+      <a href="#contact" class="cta-btn">Contact me now</a>
+    </div>
+    <p>I didn't learn new construction from a textbook. I grew up around it. In high school I worked as a laborer for a builder, picking up odd jobs around the neighborhoods we were building. I learned how homes go together from the dirt up, long before I ever sold one.</p>
+    <p>Today, new construction makes up 75% of my business, running from Orem and Vineyard all the way down through Salem. I represent multiple small builders in the area, which means I see this world from both sides of the table: how builders price, how they negotiate, and where they have room to move.</p>
+    <p>And I practice what I preach. I believe in this route so much that my wife and I bought a new construction home ourselves. The incentives are a big part of how we got into our own home, and that experience is exactly why I love helping buyers do the same.</p>
+  </section>
+
+  <!-- ============ BUILDERS ============ -->
+  <section class="section">
+    <div class="eyebrow">The players</div>
+    <h2>Builders in our area, and what they build</h2>
+    <p>Utah County and the surrounding market has a healthy mix of national and local builders. Each has a different personality: different price points, different included features, different flexibility on changes. Here's the current lineup:</p>
+
+    <table class="builder-table">
+      <thead>
+        <tr><th>Builder</th><th>Home types</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="b-name">D.R. Horton</td><td><span class="tag">Townhome</span><span class="tag">Single Family</span></td></tr>
+        <tr><td class="b-name">Edge Homes</td><td><span class="tag">Condo</span><span class="tag">Townhome</span><span class="tag">Single Family</span></td></tr>
+        <tr><td class="b-name">Arrive Homes</td><td><span class="tag">Townhome</span><span class="tag">Single Family</span></td></tr>
+        <tr><td class="b-name">Keystone</td><td><span class="tag">Condo (Spanish Fork)</span><span class="tag">Townhome (Spanish Fork)</span><span class="tag">Single Family (Provo)</span></td></tr>
+        <tr><td class="b-name">Visionary Homes</td><td><span class="tag">Townhome</span><span class="tag">Single Family</span></td></tr>
+        <tr><td class="b-name">Salisbury Homes</td><td><span class="tag">Single Family</span></td></tr>
+        <tr><td class="b-name">Lennar</td><td><span class="tag">Single Family</span></td></tr>
+      </tbody>
+    </table>
+
+    <p>National builders (D.R. Horton, Lennar) tend to move fast and offer aggressive financing incentives through their in-house lenders. Local and regional builders (Edge, Arrive, Keystone, Visionary, Salisbury) often offer more flexibility on lots, floor plans, and finishes. Neither is automatically better. It depends on what matters most to you.</p>
+
+    <div class="step-card">
+      <div class="step-label">Step 1</div>
+      <h3>The most expensive free tour in real estate happens every Saturday.</h3>
+      <p>It goes like this: you're out running errands, you see a model home, and you wander in "just to look." The on-site rep is friendly, hands you a brochure, and asks you to sign in. That signature can lock in that you walked in unrepresented, and with some builders it can cost you the right to bring your own agent into the deal at all.</p>
+      <p><strong>Do not tour a model home by yourself.</strong> The rep behind that desk is great at their job, and their job is to sell you that builder's home on that builder's terms. When I walk in with you, you have someone whose only job is your side of the deal: comparing that community against every other builder on this list, catching what the contract doesn't say, and negotiating the incentives that never make the brochure.</p>
+      <p>Here's the part most buyers never see. I've spent years building relationships with the builder reps in these communities. They know me, they trust my buyers close, and that trust becomes real leverage: earlier word on price drops, flexibility on lots, and incentive stacks they don't offer a stranger who walked in off the street. You get all of that just by having me next to you, and it costs you nothing. The builder pays my commission.</p>
+    </div>
+  </section>
+
+  <!-- ============ INCENTIVES ============ -->
+  <section class="section">
+    <div class="eyebrow">The leverage</div>
+    <h2>Builder incentives: the real negotiation</h2>
+    <p>Builders hate cutting the sticker price. It hurts the appraised values of every other home in the neighborhood. So instead, they negotiate with <strong>incentives</strong>. Common ones right now:</p>
+    <ul>
+      <li><strong>Interest rate buydowns:</strong> the builder pays to lower your mortgage rate, sometimes for the first few years, sometimes for the life of the loan. This can be worth tens of thousands of dollars.</li>
+      <li><strong>Closing cost credits:</strong> the builder covers part or all of your closing costs, often tied to using their preferred lender.</li>
+      <li><strong>Free or discounted upgrades:</strong> appliance packages, flooring, blinds, landscaping, or a finished basement thrown in.</li>
+      <li><strong>Price reductions on standing inventory:</strong> homes that are already built and sitting are where builders get most flexible.</li>
+    </ul>
+    <div class="callout"><strong>Timing tip:</strong> Builders have quarterly and year-end sales goals. The last weeks of a quarter, and especially December, are when incentives get most generous on move-in-ready homes.</div>
+  </section>
+
+  <!-- ============ INVENTORY + TIMELINE (MERGED) ============ -->
+  <section class="section">
+    <div class="eyebrow">What's available</div>
+    <h2>Inventory and timelines: why they decide everything</h2>
+    <p>Every new construction home falls into one of three buckets, and each comes with its own timeline. Understanding that connection is the single biggest thing that will sharpen your decision making, because your move-in date narrows your real options before you ever look at a floor plan.</p>
+    <ul>
+      <li><strong>Dirt (to-be-built):</strong> You pick the lot and the plan, and the builder builds it for you. Most choice, longest wait, typically 6 to 12 months.</li>
+      <li><strong>Spec homes:</strong> Already under construction. You may still get to choose some finishes depending on the stage. Usually 1 to 4 months out.</li>
+      <li><strong>Move-in ready:</strong> Finished and sitting. Least customization, fastest close, and the biggest incentives. This is the inventory builders most need to move.</li>
+    </ul>
+    <p>Here's how the correlation plays out in real life. If your lease ends in 60 days, dirt is off the table no matter how much you love the floor plan, and move-in ready inventory is your market. If you have 9 to 12 months of runway, dirt gives you maximum choice and time to plan. Spec homes are the middle path: some choice, a manageable wait, and often solid incentives. Buyers who skip this step fall in love with homes they can't actually buy on their timeline. Buyers who start here shop only what fits, negotiate from a position of clarity, and never feel rushed into the wrong home.</p>
+
+    <h3 class="sub-head">What the build itself looks like</h3>
+    <p>For a to-be-built home, here's roughly what to expect:</p>
+    <ul>
+      <li><strong>Weeks 1 to 2: Contract and lot selection.</strong> You sign the builder's purchase agreement and put down an earnest deposit, often larger than resale, sometimes $5K to $20K or more.</li>
+      <li><strong>Weeks 2 to 6: Design center.</strong> You select finishes and upgrades. This is where budgets quietly balloon. More on that below.</li>
+      <li><strong>Months 2 to 8: Construction.</strong> Foundation, framing, mechanicals, drywall, finishes. Weather and supply chains can shift this.</li>
+      <li><strong>Final month: Walkthroughs.</strong> A pre-drywall walk if offered (ask for it), then a final "blue tape" walkthrough where you flag defects.</li>
+      <li><strong>Closing.</strong> Standard closing process, then keys.</li>
+    </ul>
+    <div class="callout"><strong>Protect yourself:</strong> Hire your own independent home inspector, even on a brand-new home. Yes, really. New homes fail inspections all the time. Builders move fast and subcontractors make mistakes. A few hundred dollars here can save you thousands.</div>
+    <p>Inventory changes weekly. If you want to know what's actually available right now across these builders, that's exactly what the form on this page is for.</p>
+  </section>
+
+  <!-- ============ INCLUDED VS UPGRADES ============ -->
+  <section class="section">
+    <div class="eyebrow">The fine print</div>
+    <h2>What's included vs. what's an upgrade</h2>
+    <p>The gorgeous model home you tour is almost never the base home. Models are loaded with upgrades, often $50K to $150K worth. The base price gets you the "included features" sheet, and everything else costs extra.</p>
+    <p>Commonly <em>not</em> included in base pricing:</p>
+    <ul>
+      <li>Refrigerator, washer, and dryer</li>
+      <li>Blinds and window coverings</li>
+      <li>Backyard landscaping (and sometimes front)</li>
+      <li>Upgraded flooring, countertops, and cabinet hardware you saw in the model</li>
+    </ul>
+    <p><strong>Smart upgrade strategy:</strong> Spend builder money on things that are expensive to change later, like structural options, extra windows, taller ceilings, and rough-in plumbing for a future basement bathroom. Skip things you can do cheaper after closing, like light fixtures, blinds, and landscaping.</p>
+  </section>
+
+  <!-- ============ FINANCING ============ -->
+  <section class="section">
+    <div class="eyebrow">The money</div>
+    <h2>Financing a new build</h2>
+    <p>Most builders have a <strong>preferred lender</strong> (national builders often own theirs outright) and tie their best incentives to using them. That's usually a fine deal, but not automatically.</p>
+    <ul>
+      <li><strong>Always get a second quote.</strong> Take the preferred lender's offer to an outside lender and compare the full picture: rate, fees, and the incentive combined.</li>
+      <li><strong>Ask about rate locks.</strong> On an 8-month build, rates can move a lot. Ask whether you can lock, for how long, and what an extension costs. Some lenders offer a "lock and float down," where you're protected if rates rise and you benefit if they fall.</li>
+      <li><strong>Budget past the mortgage.</strong> New neighborhoods often carry HOA fees and, in some Utah developments, special assessments or higher property tax as the area builds out. Get the numbers in writing.</li>
+    </ul>
+    <div class="callout"><strong>Need a great lender?</strong> Reach out to me if you want recommendations. I work with lenders every week and I'm happy to send you a few I trust. Just drop a note in the <a href="#contact" style="color: var(--navy-mid); font-weight: 600;">form below</a>.</div>
+  </section>
+
+  <!-- ============ RED FLAGS ============ -->
+  <section class="section">
+    <div class="eyebrow">Proceed with caution</div>
+    <h2>Red flags to watch for</h2>
+    <div class="redflag"><strong>Pressure to sign same-day.</strong> "This incentive expires tonight" is a sales tactic. Legitimate incentives are almost always available tomorrow too.</div>
+    <div class="redflag"><strong>No pre-drywall walkthrough allowed.</strong> If a builder won't let you (or your inspector) see the home before the walls close up, ask why.</div>
+    <div class="redflag"><strong>Vague or verbal promises.</strong> If it's not written into the contract or an addendum, it doesn't exist. "We'll take care of that" means nothing at closing.</div>
+    <div class="redflag"><strong>Earnest money that isn't clearly refundable, or isn't clear when.</strong> Understand exactly what happens to your deposit if financing falls through or the build is delayed.</div>
+    <div class="redflag"><strong>A one-sided contract with no review period.</strong> Builder contracts are written by builder attorneys. Have someone on your side read it before you sign.</div>
+  </section>
+
+  <!-- ============ QUESTIONS ============ -->
+  <section class="section">
+    <div class="eyebrow">Bring this list</div>
+    <h2>Questions to ask every builder</h2>
+    <ul class="q-list">
+      <li class="q-first">Rule number one before any of these: do not tour the model home without an agent representing you.</li>
+      <li>What incentives are you currently offering, and do they require your preferred lender?</li>
+      <li>What exactly is included in the base price? Can I get the included features sheet?</li>
+      <li>How much did the upgrades in this model home cost, all-in?</li>
+      <li>What's your average delay beyond the estimated completion date?</li>
+      <li>Can I do a pre-drywall walkthrough with my own inspector?</li>
+      <li>What does your warranty cover at 1 year, 2 years, and 10 years?</li>
+      <li>What are the HOA fees, and what do they cover?</li>
+      <li>Under what conditions is my earnest money refundable?</li>
+      <li>Are there lot premiums, and which lots carry them?</li>
+      <li>What happens to my rate lock if construction runs long?</li>
+    </ul>
+  </section>
+
+  <!-- ============ LEAD FORM (BOTTOM) ============ -->
+  <div class="lead-card bottom" id="contact">
+    <h3>Ready to see what's out there?</h3>
+    <p class="sub">I track current inventory and incentives across all of these builders. Tell me what you're looking for and I'll send you what actually fits, usually within a day.</p>
+    <form class="lead-form" action="#" method="POST">
+      <div class="row2">
+        <div>
+          <label for="name-bot">Name</label>
+          <input type="text" id="name-bot" name="name" required autocomplete="name">
+        </div>
+        <div>
+          <label for="email-bot">Email</label>
+          <input type="email" id="email-bot" name="email" required autocomplete="email">
+        </div>
+      </div>
+      <label for="looking-bot">What are you looking for?</label>
+      <textarea id="looking-bot" name="message" placeholder="Home type, area, budget, timeline. Whatever you know so far."></textarea>
+      <button type="submit">Send me the details</button>
+    </form>
+  </div>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="f-brand">Stubbs Realty</div>
+  <div>Tylor Stubbs &nbsp;&middot;&nbsp; Utah New Construction Specialist &nbsp;&middot;&nbsp; Orem to Salem</div>
+</footer>
+
+</body>
+</html>
