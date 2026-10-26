@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>New Construction Guide $1,000 Edition</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Everything you need to know before buying a new construction home in Utah County, plus $1,000 back from my commission when you show me the coupon.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500&display=swap" rel="stylesheet">
+<style>
+  /* Layout: a reading column of guide content on Stubbs Realty white, broken by full width navy bands for the offer and the contact block. Brand: navy, gold, cream, brick. */
+  :root {
+    --paper: #fdfbf7;
+    --paper-2: #f5e8d4;
+    --ink: #0f1c32;
+    --muted: #2e4170;
+    --green: #1b2a4a;
+    --band: #0f1c32;
+    --band-ink: #f5e8d4;
+    --band-muted: #e9ddc8;
+    --gold: #9c7240;
+    --gold-bright: #d4a96a;
+    --red: #8b1a1a;
+    --red-bg: #faf0f0;
+    --line: #e3d9c6;
+    --card: #faf4e9;
+    --f-display: "Playfair Display", Georgia, serif;
+    --f-body: "Josefin Sans", "Segoe UI", system-ui, sans-serif;
+    --f-mono: "Josefin Sans", "Segoe UI", system-ui, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #0b1526; --paper-2: #13213a; --ink: #f5e8d4; --muted: #c3cbdd;
+      --green: #d4a96a; --band: #0a1222; --band-ink: #f5e8d4; --band-muted: #d6cdbd;
+      --gold: #d4a96a; --gold-bright: #d4a96a; --red: #e08a80; --red-bg: #2a1418;
+      --line: #24334f; --card: #121e33; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0b1526; --paper-2: #13213a; --ink: #f5e8d4; --muted: #c3cbdd;
+    --green: #d4a96a; --band: #0a1222; --band-ink: #f5e8d4; --band-muted: #d6cdbd;
+    --gold: #d4a96a; --gold-bright: #d4a96a; --red: #e08a80; --red-bg: #2a1418;
+    --line: #24334f; --card: #121e33; color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--f-body);
+    font-size: 1.06rem;
+    font-weight: 300;
+    line-height: 1.7;
+    padding-bottom: 4.5rem;
+  }
+  body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--band); }
+  h1, h2, h3 { font-family: var(--f-display); line-height: 1.15; text-wrap: balance; margin: 0; }
+  p { margin: 0; }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--gold-bright); outline-offset: 2px; }
+
+  .gutter { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  .col { max-width: 700px; margin: 0 auto; }
+  .col-wide { max-width: 1020px; margin: 0 auto; }
+
+  /* ===== top strip ===== */
+  .strip { background: var(--band); color: var(--band-muted); font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; }
+  .strip .col-wide { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.25rem 1rem; padding-block: 0.6rem; }
+  .strip a { color: var(--gold-bright); text-decoration: none; font-weight: 700; }
+
+  /* ===== hero ===== */
+  .hero { background: var(--band); color: var(--band-ink); position: relative; overflow: hidden; }
+  .hero::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0.09;
+    background:
+      repeating-radial-gradient(circle at 85% 30%, transparent 0 9px, var(--gold-bright) 9px 10px),
+      repeating-radial-gradient(circle at 10% 110%, transparent 0 13px, var(--gold-bright) 13px 14px);
+  }
+  .hero .col-wide { position: relative; z-index: 1; padding-block: 3.25rem 3.5rem; display: grid; gap: 2rem; }
+  .serial { font-family: var(--f-mono); font-size: 0.78rem; letter-spacing: 0.18em; color: var(--gold-bright); }
+  .hero h1 { font-size: clamp(2.2rem, 6vw, 3.6rem); font-weight: 900; margin: 0.75rem 0 1rem; letter-spacing: -0.01em; }
+  .hero h1 em { font-style: italic; font-weight: 500; color: var(--gold-bright); }
+  .hero .lede { max-width: 34rem; color: var(--band-muted); font-size: 1.08rem; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.75rem; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-family: var(--f-body); font-weight: 700; font-size: 0.92rem; letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 0.85rem 1.4rem; border-radius: 2px; text-decoration: none; border: 2px solid var(--gold-bright); cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .btn-gold { background: var(--gold-bright); color: #0f1c32; }
+  .btn-gold:hover { background: transparent; color: var(--gold-bright); }
+  .btn-ghost { background: transparent; color: var(--band-ink); }
+  .btn-ghost:hover { background: var(--gold-bright); color: #0f1c32; }
+
+  .hero-bill {
+    display: block; text-decoration: none; color: inherit;
+    border: 1px solid rgba(212,169,106,0.5); padding: 0.6rem; background: rgba(0,0,0,0.18);
+    transform: rotate(-2deg); transition: transform 0.25s ease; max-width: 520px; justify-self: center; width: 100%;
+  }
+  .hero-bill:hover { transform: rotate(0deg) scale(1.01); }
+  .hero-bill img { display: block; width: 100%; height: auto; }
+  .hero-bill span { display: block; font-family: var(--f-mono); font-size: 0.72rem; letter-spacing: 0.14em; color: var(--gold-bright); text-align: center; margin-top: 0.5rem; }
+  @media (min-width: 860px) {
+    .hero .col-wide { grid-template-columns: 1.1fr 1fr; align-items: center; padding-block: 4.5rem 5rem; }
+  }
+
+  /* ===== guide sections ===== */
+  main { display: block; }
+  .section { padding-block: 3rem 0; }
+  .section > * + * { margin-top: 1rem; }
+  .eyebrow { font-family: var(--f-mono); font-size: 0.76rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
+  .section h2 { font-size: clamp(1.7rem, 4vw, 2.2rem); font-weight: 700; color: var(--ink); margin-top: 0.4rem; }
+  .section h3.sub { font-size: 1.3rem; font-weight: 700; margin-top: 2rem; }
+  .section ul { margin: 1rem 0 0; padding-left: 1.2rem; display: grid; gap: 0.55rem; }
+  .section ul li::marker { color: var(--gold); }
+  strong { font-weight: 600; }
+  .eyebrow, .serial, th, .coupon-cap, .math, .agent .phone, .how .n { font-weight: 600; }
+
+  .note { background: var(--card); border: 1px solid var(--line); padding: 1.1rem 1.25rem; font-size: 0.98rem; }
+  .note .tag { display: block; font-family: var(--f-mono); font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem; }
+
+  /* agent */
+  .agent { display: flex; flex-wrap: wrap; align-items: center; gap: 1.25rem; padding: 1.25rem; background: var(--card); border: 1px solid var(--line); margin-top: 1.5rem !important; }
+  .agent img { width: 104px; height: 104px; border-radius: 50%; object-fit: cover; border: 3px solid var(--gold-bright); flex: none; }
+  .agent .who { flex: 1 1 200px; min-width: 0; }
+  .agent .name { font-family: var(--f-display); font-size: 1.35rem; font-weight: 700; }
+  .agent .role { font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+  .agent .phone { font-family: var(--f-mono); font-size: 1rem; margin-top: 0.35rem; color: var(--green); }
+
+  /* builder table */
+  .table-wrap { overflow-x: auto; margin-top: 1.25rem !important; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.95rem; min-width: 440px; }
+  th { font-family: var(--f-mono); font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; text-align: left; color: var(--band-ink); background: var(--band); padding: 0.65rem 0.75rem; font-weight: 500; }
+  td { padding: 0.65rem 0.75rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  td.b { font-weight: 700; white-space: nowrap; }
+  .chip { display: inline-block; font-size: 0.74rem; letter-spacing: 0.04em; border: 1px solid var(--gold); color: var(--ink); padding: 0.1rem 0.45rem; margin: 0.12rem 0.3rem 0.12rem 0; border-radius: 2px; }
+
+  /* step card */
+  .step { background: var(--band); color: var(--band-ink); padding: 2rem 1.5rem; margin-top: 2rem !important; border-top: 3px solid var(--gold-bright); }
+  .step > * + * { margin-top: 1rem; }
+  .step .serial { display: block; }
+  .step h3 { font-size: 1.55rem; font-weight: 700; }
+  .step p { color: var(--band-muted); }
+  .step strong { color: var(--gold-bright); }
+
+  /* red flags */
+  .flags { display: grid; gap: 0.75rem; margin-top: 1.25rem !important; }
+  .flag { background: var(--red-bg); border-left: 3px solid var(--red); padding: 0.95rem 1.15rem; }
+  .flag strong { color: var(--red); }
+
+  /* questions */
+  .qs { list-style: none; padding: 0 !important; gap: 0 !important; counter-reset: q; }
+  .qs li { padding: 0.8rem 0 0.8rem 2.6rem; border-bottom: 1px solid var(--line); position: relative; counter-increment: q; }
+  .qs li::before { content: counter(q, decimal-leading-zero); position: absolute; left: 0; top: 0.85rem; font-family: var(--f-mono); font-size: 0.8rem; color: var(--gold); }
+  .rule1 { background: var(--card); border: 1px solid var(--gold); padding: 1rem 1.2rem; font-weight: 700; margin-top: 1.25rem !important; }
+
+  /* ===== $1,000 offer band ===== */
+  .offer { background: var(--band); color: var(--band-ink); margin-top: 3.5rem; position: relative; }
+  .offer::before {
+    content: ""; position: absolute; inset: 10px; pointer-events: none;
+    border: 1px solid rgba(212,169,106,0.45); outline: 1px solid rgba(212,169,106,0.2); outline-offset: 4px;
+  }
+  .offer .col-wide { padding-block: 3.5rem; position: relative; display: grid; gap: 2.25rem; }
+  .offer .eyebrow { color: var(--gold-bright); }
+  .offer h2 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; margin-top: 0.5rem; }
+  .offer h2 em { font-style: italic; font-weight: 500; color: var(--gold-bright); }
+  .offer .intro > * + * { margin-top: 1rem; }
+  .offer .intro p { color: var(--band-muted); max-width: 38rem; }
+  .offer .intro p strong { color: var(--band-ink); }
+  .coupon-frame { background: #fdfbf7; padding: 0.6rem; box-shadow: 0 18px 40px rgba(0,0,0,0.4); }
+  .coupon-frame img { display: block; width: 100%; height: auto; }
+  .coupon-cap { font-family: var(--f-mono); font-size: 0.76rem; letter-spacing: 0.12em; color: var(--gold-bright); text-align: center; margin-top: 0.75rem; }
+  .coupon-cap a { color: var(--gold-bright); }
+  .how { display: grid; gap: 1px; background: rgba(212,169,106,0.35); border: 1px solid rgba(212,169,106,0.35); }
+  .how > div { background: var(--band); padding: 1.25rem 1.25rem 1.4rem; }
+  .how .n { font-family: var(--f-display); font-size: 2.4rem; font-weight: 900; color: var(--gold-bright); line-height: 1; }
+  .how h3 { font-size: 1.15rem; margin-top: 0.6rem; }
+  .how p { color: var(--band-muted); font-size: 0.96rem; margin-top: 0.35rem; }
+  .math { display: grid; grid-template-columns: 1fr auto; gap: 0.35rem 1.5rem; font-family: var(--f-mono); font-size: 0.92rem; font-variant-numeric: tabular-nums; border-top: 1px solid rgba(212,169,106,0.4); padding-top: 1rem; max-width: 30rem; }
+  .math .v { text-align: right; }
+  .math .total { color: var(--gold-bright); border-top: 1px dashed rgba(212,169,106,0.5); padding-top: 0.35rem; }
+  .fine { font-size: 0.82rem; color: var(--band-muted); max-width: 46rem; }
+  .fine strong { color: var(--band-ink); }
+  @media (min-width: 720px) { .how { grid-template-columns: repeat(3, 1fr); } }
+  @media (min-width: 900px) {
+    .offer .top { display: grid; grid-template-columns: 1fr 1.05fr; gap: 2.5rem; align-items: center; }
+  }
+  .offer .top { display: grid; gap: 2rem; }
+
+  /* ===== contact (no form) ===== */
+  .contact { background: var(--paper-2); margin-top: 3.5rem; }
+  .contact .col { padding-block: 3rem; display: grid; gap: 1.25rem; justify-items: center; text-align: center; }
+  .contact h2 { font-size: clamp(1.8rem, 4.5vw, 2.4rem); font-weight: 700; }
+  .contact p { color: var(--muted); max-width: 32rem; }
+  .bignum { font-family: var(--f-display); font-weight: 900; font-size: clamp(2.1rem, 8vw, 3.2rem); letter-spacing: 0.02em; color: var(--green); font-variant-numeric: tabular-nums; user-select: all; line-height: 1.1; }
+  .contact-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+  .btn-ink { background: var(--band); color: var(--band-ink); border-color: var(--band); }
+  .btn-ink:hover { background: transparent; color: var(--ink); }
+  .btn-line { background: transparent; color: var(--ink); border-color: var(--ink); }
+  .btn-line:hover { background: var(--ink); color: var(--paper); }
+  .copied { font-size: 0.85rem; color: var(--green); min-height: 1.3em; }
+
+  footer { background: var(--band); color: var(--band-muted); text-align: center; font-size: 0.86rem; }
+  footer .col { padding-block: 2rem; }
+  footer .fb { font-family: var(--f-display); font-size: 1.15rem; color: var(--band-ink); }
+
+  /* sticky call bar */
+  .callbar {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 20;
+    background: var(--band); color: var(--band-ink); border-top: 2px solid var(--gold-bright);
+    padding-block: 0.6rem calc(0.6rem + env(safe-area-inset-bottom, 0px));
+  }
+  .callbar .col-wide { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; }
+  .callbar .t { font-size: 0.85rem; line-height: 1.3; min-width: 0; }
+  .callbar .t b { color: var(--gold-bright); }
+  .callbar .btn { padding: 0.6rem 1rem; font-size: 0.8rem; white-space: nowrap; }
+</style>
+</head>
+<body>
+
+
+<div class="strip gutter">
+  <div class="col-wide">
+    <span>Stubbs Realty &middot; Utah County New Construction</span>
+    <span>Call or text <a href="tel:+18015009323">801.500.9323</a></span>
+  </div>
+</div>
+
+<header class="hero gutter">
+  <div class="col-wide">
+    <div>
+      <div class="serial">SERIES 2026 &nbsp;&middot;&nbsp; OREM TO SALEM</div>
+      <h1>The Smart Buyer's Guide to <em>New Construction</em></h1>
+      <p class="lede">What Utah builders won't put on the brochure, how to walk into a model home knowing more than most buyers ever do, and $1,000 back in your pocket when you work with me.</p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="#discount">See the $1,000 offer</a>
+        <a class="btn btn-ghost" href="#guide">Read the guide</a>
+      </div>
+    </div>
+    <a class="hero-bill" href="#discount" aria-label="Jump to the $1,000 coupon section">
+      <img src="coupon-1000.jpg" alt="Stubbs Realty $1,000 discount coupon on our commission" width="1400" height="906">
+      <span>SHOW ME THIS COUPON &middot; GET $1,000 OFF MY COMMISSION</span>
+    </a>
+  </div>
+</header>
+
+<main id="guide">
+  <div class="gutter"><div class="col">
+
+    <section class="section">
+      <div class="eyebrow">Start here</div>
+      <h2>Why buyers are choosing new builds</h2>
+      <p>New construction has quietly become one of the best deals in the Utah market. Builders carry inventory they need to move, which means they're offering incentives like rate buydowns, closing cost credits, and free upgrades that regular sellers simply can't match.</p>
+      <p>But buying new is a different game than buying resale. The contract is written by the builder. The sales agent in the model home works for the builder. And the price on the sign is rarely the whole story. This guide walks you through the game so you can play it well.</p>
+      <div class="note"><span class="tag">Good to know</span>The builder's on site agent represents the builder, not you. Bringing your own agent costs you nothing because the builder pays the commission. With my coupon, you actually come out $1,000 ahead for bringing me.</div>
+    </section>
+
+    <section class="section">
+      <div class="eyebrow">Your guide</div>
+      <h2>Why I specialize in new construction</h2>
+      <div class="agent">
+        <img src="headshot.jpg" alt="Tylor Stubbs" width="104" height="104">
+        <div class="who">
+          <div class="name">Tylor Stubbs</div>
+          <div class="role">Stubbs Realty &middot; New Construction Specialist</div>
+          <div class="phone">Call or text 801.500.9323</div>
+        </div>
+      </div>
+      <p>I didn't learn new construction from a textbook. I grew up around it. In high school I worked as a laborer for a builder, picking up odd jobs around the neighborhoods we were building. I learned how homes go together from the dirt up, long before I ever sold one.</p>
+      <p>Today, new construction makes up 75% of my business, running from Orem and Vineyard all the way down through Salem. I represent multiple small builders in the area, which means I see this world from both sides of the table: how builders price, how they negotiate, and where they have room to move.</p>
+      <p>And I practice what I preach. I believe in this route so much that my wife and I bought a new construction home ourselves. The incentives are a big part of how we got into our own home, and that experience is exactly why I love helping buyers do the same.</p>
+    </section>
+
+  </div></div>
+
+  <!-- ===== $1,000 OFFER ===== -->
+  <section class="offer gutter" id="discount" aria-labelledby="offer-h">
+    <div class="col-wide">
+      <div class="top">
+        <div class="intro">
+          <div class="eyebrow">The $1,000 coupon</div>
+          <h2 id="offer-h">Show me this coupon. <em>Keep $1,000.</em></h2>
+          <p><strong>Here's the deal.</strong> When you work with me on your home purchase and show me this coupon, I take $1,000 off my commission and it goes to you at closing.</p>
+          <p>On most new construction, the builder already pays my commission, so having me on your side costs you nothing. This coupon takes it one step further. You get a full time advocate at the table <strong>and</strong> $1,000 back for bringing me.</p>
+          <div class="math" aria-label="Example of how the coupon works">
+            <span>Cost of having me represent you</span><span class="v">$0</span>
+            <span>Coupon credit back to you</span><span class="v">+$1,000</span>
+            <span class="total">You come out ahead</span><span class="v total">$1,000</span>
+          </div>
+        </div>
+        <div>
+          <div class="coupon-frame">
+            <img src="coupon-1000.jpg" alt="$1,000 discount coupon on our commission, valid for qualified clients" width="1400" height="906" loading="lazy">
+          </div>
+          <p class="coupon-cap">SCREENSHOT IT &middot; SAVE IT &middot; <a href="coupon-1000.jpg" target="_blank" rel="noopener">OPEN FULL SIZE</a></p>
+        </div>
+      </div>
+
+      <div class="how">
+        <div>
+          <div class="n">1</div>
+          <h3>Save the coupon</h3>
+          <p>Screenshot it or keep the printed card. Printed or on your phone, both count.</p>
+        </div>
+        <div>
+          <div class="n">2</div>
+          <h3>Show it to me up front</h3>
+          <p>Show me the coupon when we sit down to start working together, before we sign anything.</p>
+        </div>
+        <div>
+          <div class="n">3</div>
+          <h3>Get $1,000 at closing</h3>
+          <p>I write the credit into your deal and $1,000 of my commission goes to you at closing.</p>
+        </div>
+      </div>
+
+      <p class="fine"><strong>The fine print.</strong> Valid for qualified clients who sign a buyer representation agreement with Tylor Stubbs and close on a home purchase. Coupon must be presented before that agreement is signed. One coupon per transaction. Not redeemable for cash. Cannot be combined with other offers. The credit is applied at closing and is subject to lender approval and the terms of your purchase contract. Restrictions apply.</p>
+    </div>
+  </section>
+
+  <div class="gutter"><div class="col">
+
+    <section class="section">
+      <div class="eyebrow">The players</div>
+      <h2>Builders in our area, and what they build</h2>
+      <p>Utah County and the surrounding market has a healthy mix of national and local builders. Each has a different personality: different price points, different included features, different flexibility on changes. Here's the current lineup:</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th scope="col">Builder</th><th scope="col">Home types</th></tr></thead>
+          <tbody>
+            <tr><td class="b">D.R. Horton</td><td><span class="chip">Townhome</span><span class="chip">Single Family</span></td></tr>
+            <tr><td class="b">Edge Homes</td><td><span class="chip">Condo</span><span class="chip">Townhome</span><span class="chip">Single Family</span></td></tr>
+            <tr><td class="b">Arrive Homes</td><td><span class="chip">Townhome</span><span class="chip">Single Family</span></td></tr>
+            <tr><td class="b">Keystone</td><td><span class="chip">Condo (Spanish Fork)</span><span class="chip">Townhome (Spanish Fork)</span><span class="chip">Single Family (Provo)</span></td></tr>
+            <tr><td class="b">Visionary Homes</td><td><span class="chip">Townhome</span><span class="chip">Single Family</span></td></tr>
+            <tr><td class="b">Magnus Builders</td><td><span class="chip">Single Family</span></td></tr>
+            <tr><td class="b">Salisbury Homes</td><td><span class="chip">Single Family</span></td></tr>
+            <tr><td class="b">Lennar</td><td><span class="chip">Single Family</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>National builders (D.R. Horton, Lennar) tend to move fast and offer aggressive financing incentives through their in house lenders. Local and regional builders (Edge, Arrive, Keystone, Magnus, Visionary, Salisbury) often offer more flexibility on lots, floor plans, and finishes. Neither is automatically better. It depends on what matters most to you.</p>
+      <p>Full transparency: Magnus Builders is the builder I represent on the listing side. That means I know their pricing, their communities, and their process from the inside. When I represent you as a buyer with any other builder on this list, that insider knowledge of how builders actually operate comes with me.</p>
+
+      <div class="step">
+        <span class="serial">STEP 1</span>
+        <h3>The most expensive free tour in real estate happens every Saturday.</h3>
+        <p>It goes like this: you're out running errands, you see a model home, and you wander in "just to look." The on site rep is friendly, hands you a brochure, and asks you to sign in. That signature can lock in that you walked in unrepresented, and with some builders it can cost you the right to bring your own agent into the deal at all. That also means no $1,000 coupon.</p>
+        <p><strong>Do not tour a model home by yourself.</strong> The rep behind that desk is great at their job, and their job is to sell you that builder's home on that builder's terms. When I walk in with you, you have someone whose only job is your side of the deal: comparing that community against every other builder on this list, catching what the contract doesn't say, and negotiating the incentives that never make the brochure.</p>
+        <p>Here's the part most buyers never see. I've spent years building relationships with the builder reps in these communities. They know me, they trust my buyers close, and that trust becomes real leverage: earlier word on price drops, flexibility on lots, and incentive stacks they don't offer a stranger who walked in off the street. You get all of that just by having me next to you, and it costs you nothing. The builder pays my commission, and the coupon puts $1,000 of it back in your hands.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="eyebrow">The leverage</div>
+      <h2>Builder incentives: the real negotiation</h2>
+      <p>Builders hate cutting the sticker price. It hurts the appraised values of every other home in the neighborhood. So instead, they negotiate with <strong>incentives</strong>. Common ones right now:</p>
+      <ul>
+        <li><strong>Interest rate buydowns:</strong> the builder pays to lower your mortgage rate, sometimes for the first few years, sometimes for the life of the loan. This can be worth tens of thousands of dollars.</li>
+        <li><strong>Closing cost credits:</strong> the builder covers part or all of your closing costs, often tied to using their preferred lender.</li>
+        <li><strong>Free or discounted upgrades:</strong> appliance packages, flooring, blinds, landscaping, or a finished basement thrown in.</li>
+        <li><strong>Price reductions on standing inventory:</strong> homes that are already built and sitting are where builders get most flexible.</li>
+      </ul>
+      <div class="note"><span class="tag">Timing tip</span>Builders have quarterly and year end sales goals. The last weeks of a quarter, and especially December, are when incentives get most generous on move in ready homes. Stack those incentives with my $1,000 coupon and the savings add up fast.</div>
+    </section>
+
+    <section class="section">
+      <div class="eyebrow">What's available</div>
+      <h2>Inventory and timelines: why they decide everything</h2>
+      <p>Every new construction home falls into one of three buckets, and each comes with its own timeline. Understanding that connection is the single biggest thing that will sharpen your decision making, because your move in date narrows your real options before you ever look at a floor plan.</p>
+      <ul>
+        <li><strong>Dirt (to be built):</strong> You pick the lot and the plan, and the builder builds it for you. Most choice, longest wait, typically 6 to 12 months.</li>
+        <li><strong>Spec homes:</strong> Already under construction. You may still get to choose some finishes depending on the stage. Usually 1 to 4 months out.</li>
+        <li><strong>Move in ready:</strong> Finished and sitting. Least customization, fastest close, and the biggest incentives. This is the inventory builders most need to move.</li>
+      </ul>
+      <p>Here's how the correlation plays out in real life. If your lease ends in 60 days, dirt is off the table no matter how much you love the floor plan, and move in ready inventory is your market. If you have 9 to 12 months of runway, dirt gives you maximum choice and time to plan. Spec homes are the middle path: some choice, a manageable wait, and often solid incentives. Buyers who skip this step fall in love with homes they can't actually buy on their timeline. Buyers who start here shop only what fits, negotiate from a position of clarity, and never feel rushed into the wrong home.</p>
+
+      <h3 class="sub">What the build itself looks like</h3>
+      <p>For a to be built home, here's roughly what to expect:</p>
+      <ul>
+        <li><strong>Weeks 1 to 2: Contract and lot selection.</strong> You sign the builder's purchase agreement and put down an earnest deposit, often larger than resale, sometimes $5K to $20K or more.</li>
+        <li><strong>Weeks 2 to 6: Design center.</strong> You select finishes and upgrades. This is where budgets quietly balloon. More on that below.</li>
+        <li><strong>Months 2 to 8: Construction.</strong> Foundation, framing, mechanicals, drywall, finishes. Weather and supply chains can shift this.</li>
+        <li><strong>Final month: Walkthroughs.</strong> A pre drywall walk if offered (ask for it), then a final "blue tape" walkthrough where you flag defects.</li>
+        <li><strong>Closing.</strong> Standard closing process, your $1,000 coupon credit, then keys.</li>
+      </ul>
+      <div class="note"><span class="tag">Protect yourself</span>Hire your own independent home inspector, even on a brand new home. Yes, really. New homes fail inspections all the time. Builders move fast and subcontractors make mistakes. A few hundred dollars here can save you thousands.</div>
+      <p>Inventory changes weekly. If you want to know what's actually available right now across these builders, call or text me at 801.500.9323 and I'll tell you what fits.</p>
+    </section>
+
+    <section class="section">
+      <div class="eyebrow">The fine print</div>
+      <h2>What's included vs. what's an upgrade</h2>
+      <p>The gorgeous model home you tour is almost never the base home. Models are loaded with upgrades, often $50K to $150K worth. The base price gets you the "included features" sheet, and everything else costs extra.</p>
+      <p>Commonly <em>not</em> included in base pricing:</p>
+      <ul>
+        <li>Refrigerator, washer, and dryer</li>
+        <li>Blinds and window coverings</li>
+        <li>Backyard landscaping (and sometimes front)</li>
+        <li>Upgraded flooring, countertops, and cabinet hardware you saw in the model</li>
+      </ul>
+      <p><strong>Smart upgrade strategy:</strong> Spend builder money on things that are expensive to change later, like structural options, extra windows, taller ceilings, and rough in plumbing for a future basement bathroom. Skip things you can do cheaper after closing, like light fixtures, blinds, and landscaping.</p>
+    </section>
+
+    <section class="section">
+      <div class="eyebrow">The money</div>
+      <h2>Financing a new build</h2>
+      <p>Most builders have a <strong>preferred lender</strong> (national builders often own theirs outright) and tie their best incentives to using them. That's usually a fine deal, but not automatically.</p>
+      <ul>
+        <li><strong>Always get a second quote.</strong> Take the preferred lender's offer to an outside lender and compare the full picture: rate, fees, and the incentive combined.</li>
+        <li><strong>Ask about rate locks.</strong> On an 8 month build, rates can move a lot. Ask whether you can lock, for how long, and what an extension costs. Some lenders offer a "lock and float down," where you're protected if rates rise and you benefit if they fall.</li>
+        <li><strong>Budget past the mortgage.</strong> New neighborhoods often carry HOA fees and, in some Utah developments, special assessments or higher property tax as the area builds out. Get the numbers in writing.</li>
+      </ul>
+      <div class="note"><span class="tag">Need a great lender?</span>I work with lenders every week and I'm happy to send you a few I trust. Call or text me at 801.500.9323 and ask.</div>
+    </section>
+
+    <section class="section">
+      <div class="eyebrow">Proceed with caution</div>
+      <h2>Red flags to watch for</h2>
+      <div class="flags">
+        <div class="flag"><strong>Pressure to sign same day.</strong> "This incentive expires tonight" is a sales tactic. Legitimate incentives are almost always available tomorrow too.</div>
+        <div class="flag"><strong>No pre drywall walkthrough allowed.</strong> If a builder won't let you (or your inspector) see the home before the walls close up, ask why.</div>
+        <div class="flag"><strong>Vague or verbal promises.</strong> If it's not written into the contract or an addendum, it doesn't exist. "We'll take care of that" means nothing at closing.</div>
+        <div class="flag"><strong>Earnest money that isn't clearly refundable, or isn't clear when.</strong> Understand exactly what happens to your deposit if financing falls through or the build is delayed.</div>
+        <div class="flag"><strong>A one sided contract with no review period.</strong> Builder contracts are written by builder attorneys. Have someone on your side read it before you sign.</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="eyebrow">Bring this list</div>
+      <h2>Questions to ask every builder</h2>
+      <p class="rule1">Rule number one before any of these: do not tour the model home without an agent representing you.</p>
+      <ul class="qs">
+        <li>What incentives are you currently offering, and do they require your preferred lender?</li>
+        <li>What exactly is included in the base price? Can I get the included features sheet?</li>
+        <li>How much did the upgrades in this model home cost, all in?</li>
+        <li>What's your average delay beyond the estimated completion date?</li>
+        <li>Can I do a pre drywall walkthrough with my own inspector?</li>
+        <li>What does your warranty cover at 1 year, 2 years, and 10 years?</li>
+        <li>What are the HOA fees, and what do they cover?</li>
+        <li>Under what conditions is my earnest money refundable?</li>
+        <li>Are there lot premiums, and which lots carry them?</li>
+        <li>What happens to my rate lock if construction runs long?</li>
+      </ul>
+    </section>
+
+  </div></div>
+
+  <section class="contact gutter" id="contact" aria-labelledby="contact-h">
+    <div class="col">
+      <div class="eyebrow">Ready when you are</div>
+      <h2 id="contact-h">Call or text me directly</h2>
+      <p>No forms, no sign ups. Reach out when you're ready, tell me what you're looking for, and mention the $1,000 coupon. I'll send you current inventory and incentives that actually fit.</p>
+      <div class="bignum" id="phone">801.500.9323</div>
+      <div class="contact-actions">
+        <a class="btn btn-ink" href="tel:+18015009323">Call</a>
+        <a class="btn btn-line" href="sms:+18015009323">Text</a>
+        <button class="btn btn-line" type="button" id="copyBtn">Copy number</button>
+      </div>
+      <div class="copied" id="copied" aria-live="polite"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="gutter">
+  <div class="col">
+    <div class="fb">Stubbs Realty</div>
+    <div>Tylor Stubbs &nbsp;&middot;&nbsp; The Perry Group &nbsp;&middot;&nbsp; Real Broker, LLC</div>
+    <div>Utah New Construction Specialist &nbsp;&middot;&nbsp; Orem to Salem</div>
+  </div>
+</footer>
+
+<div class="callbar gutter">
+  <div class="col-wide">
+    <div class="t">Show me the coupon, get <b>$1,000</b> back.<br>801.500.9323</div>
+    <a class="btn btn-gold" href="tel:+18015009323">Call or text</a>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var btn = document.getElementById('copyBtn');
+    var out = document.getElementById('copied');
+    var num = document.getElementById('phone');
+    btn.addEventListener('click', function () {
+      function fallback() {
+        var r = document.createRange(); r.selectNodeContents(num);
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+        out.textContent = 'Number selected. Copy it from here.';
+      }
+      try {
+        navigator.clipboard.writeText('801.500.9323').then(function () {
+          out.textContent = 'Copied 801.500.9323';
+        }, fallback);
+      } catch (e) { fallback(); }
+    });
+  })();
+</script>
+
+</body>
+</html>
